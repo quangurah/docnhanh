@@ -1,0 +1,42 @@
+# Domain options for DocNhanh
+Write-Host "DocNhanh Domain Setup Options"
+Write-Host "============================="
+Write-Host ""
+
+Write-Host "1. DUCKDNS (Recommended):"
+Write-Host "   - Free domain: docnhanh.duckdns.org"
+Write-Host "   - Auto SSL from Let's Encrypt"
+Write-Host "   - Auto IP update"
+Write-Host "   - Setup: https://www.duckdns.org/"
+Write-Host ""
+
+Write-Host "2. NGROK (Quick):"
+Write-Host "   - Temporary domain (changes each restart)"
+Write-Host "   - Auto SSL"
+Write-Host "   - Setup: ngrok http 8000"
+Write-Host ""
+
+Write-Host "3. CLOUDFLARE TUNNEL:"
+Write-Host "   - Free + Global CDN"
+Write-Host "   - Auto SSL"
+Write-Host "   - No port forwarding needed"
+Write-Host "   - Setup: cloudflared tunnel create docnhanh"
+Write-Host ""
+
+Write-Host "4. SERVEO (No install):"
+Write-Host "   - Run from browser"
+Write-Host "   - Auto SSL"
+Write-Host "   - Setup: ssh -R 80:localhost:8000 serveo.net"
+Write-Host ""
+
+Write-Host "Current Status:"
+Write-Host "- Backend running on: http://localhost:8000"
+Write-Host "- API docs: http://localhost:8000/docs"
+Write-Host "- Health check: http://localhost:8000/api/v1/health"
+Write-Host ""
+
+Write-Host "Next Steps:"
+Write-Host "1. Choose your preferred method"
+Write-Host "2. Follow the setup instructions"
+Write-Host "3. Update configuration if needed"
+Write-Host "4. Test your domain"
