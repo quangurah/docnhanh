@@ -25,6 +25,18 @@ Khi hoạt động bình thường, API sẽ có sẵn tại:
 - Health: http://localhost:8000/api/v1/health
 - Docs (Swagger): http://localhost:8000/docs
 
+### 2.1) Kết nối PostgreSQL trên Supabase (tùy chọn)
+- Lấy `Project URL` và `anon key` trong Supabase Project Settings.
+- Lấy mật khẩu database (Settings → Database → Connection string → password).
+- Tạo `.env` trong `backend/` với `DATABASE_URL` dạng:
+
+```
+DATABASE_URL=postgresql://postgres:<YOUR_DB_PASSWORD>@db.zglzsqubcnwnfnxanwtl.supabase.co:5432/postgres?sslmode=require
+```
+
+- Ví dụ giá trị có sẵn: `SUPABASE_PROJECT_URL=https://zglzsqubcnwnfnxanwtl.supabase.co` và `SUPABASE_ANON_KEY=<anon key>` (không bắt buộc cho backend, nhưng hữu ích cho frontend nếu dùng Supabase SDK).
+- Backend đã tự động thêm `sslmode=require` khi phát hiện domain `supabase.co`.
+
 ### 3) Test trên máy local
 ```powershell
 Invoke-WebRequest -Uri "http://localhost:8000/api/v1/health" -Method GET -UseBasicParsing
